@@ -19,7 +19,7 @@ public class Agregar {
     
     public void agregarVehiculoFamiliar(){
         Familiar cielo = new Familiar(1, "Daewoo", "Cielo", "Azul", 100);
-        Familiar atos = new Familiar(2, "Hyundai", "Atos", "Plateado", 200);
+        Familiar atos = new Familiar(2, "Hyundai", "Atos", "Amarillo", 200);
         Familiar iDiez = new Familiar(3, "Hyundai", "Grand i10", "Gris", 300);
         Familiar accent = new Familiar(4, "Hyunday", "Accent Vision", "Negro", 250);
         Familiar optra = new Familiar(5, "Chevrolet", "Optra", "Rojo", 150);
