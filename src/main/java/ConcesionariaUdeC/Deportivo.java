@@ -16,8 +16,8 @@ public class Deportivo extends Vehiculo{
         super();
     }
     
-    public Deportivo(boolean descapotable, Integer idVehiculo, String marca, String modelo, String color, double precio) {
-        super(idVehiculo, marca, modelo, color, precio);
+    public Deportivo(boolean descapotable, Integer idVehiculo, String marca, String modelo, String color, double precio, String categoria, int cantidad, boolean disponible) {
+        super(idVehiculo, marca, modelo, color, precio, categoria, cantidad, disponible);
         this.descapotable = descapotable;
     }
 }

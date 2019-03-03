@@ -5,13 +5,19 @@
  */
 package ConcesionariaUdeC;
 
+import java.io.IOException;
+
 /**
  *
  * @author Yonathan
  */
 public class Main {
-    public static void main(String[] args){
-        Agregar agregar = new Agregar();
-        agregar.agregarVehiculoCamioneta();
+    public static void main(String[] args) throws IOException{
+        Menu menu = new Menu();
+        menu.Menu();
+        //agregar.getAutos();
+        //Agregar add = new Agregar();
+        //add.agregarVehiculoFamiliar();
+        //add.getAutos("Familiar");
     }
 }

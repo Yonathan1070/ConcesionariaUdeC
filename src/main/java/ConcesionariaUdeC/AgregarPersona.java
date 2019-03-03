@@ -5,6 +5,9 @@
  */
 package ConcesionariaUdeC;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /**
@@ -12,41 +15,69 @@ import java.util.ArrayList;
  * @author Yonathan
  */
 public class AgregarPersona {
-    public ArrayList<Persona> personas = new ArrayList<Persona>();
+    int id=1;
+    public String opcion;
+    public BufferedReader entradaDatos = new BufferedReader (new InputStreamReader (System.in));
+    public ArrayList<Persona> personas;
     
-    public void agregarAsesor(){
-        Asesor jose = new Asesor(20, 1, "80393256", "José Moncada", "josemon@hotmail.com", "Cll 5 # 13-18", "Facatativá", "3108799688");
-        Asesor alirio = new Asesor(20, 1, "80393257", "Alirio Mendez", "alirimendez@hotmail.com", "Cll 4c # 13-18", "Facatativá", "3108799689");
-        Asesor edison = new Asesor(20, 1, "1070954014", "Edison Nieto", "edini@hotmail.com", "Cra 14 # 4b-14", "Facatativá", "3108799690");
-        Asesor maria = new Asesor(20, 1, "35526078", "Maria Rincon", "mariarin@hotmail.com", "Cll 5 # 14-19", "Facatativá", "3108799691");
-        Asesor rosa = new Asesor(20, 1, "35526079", "Rosa Romero", "rosaro@hotmail.com", "Cll 8 # 19-28", "Facatativá", "3108799692");
-        
-        personas.add(jose);
-        personas.add(alirio);
-        personas.add(edison);
-        personas.add(maria);
-        personas.add(rosa);
-        
-        for (Persona listaAsesores : personas) {
-            System.out.println("  -> "+listaAsesores.getCedula()+" -> "+listaAsesores.getNombre());
-        }
+    public AgregarPersona() {
+        this.personas = new ArrayList();
     }
     
-    public void agregarCiente(){
-        Cliente mauricio = new Cliente(1, "80393256", "Mauricio Mendez", "maumen@hotmail.com", "Cll 5 # 13-18", "Facatativá", "3108799688");
-        Cliente joma = new Cliente(1, "80393257", "Joma Vega", "jomavega@hotmail.com", "Cll 4c # 13-18", "Facatativá", "3108799689");
-        Cliente juan = new Cliente(1, "1070954014", "Juan Rincon", "juanse@hotmail.com", "Cra 14 # 4b-14", "Facatativá", "3108799690");
-        Cliente jenny = new Cliente(1, "35526078", "Jenny Olaya", "jennyol@hotmail.com", "Cll 5 # 14-19", "Facatativá", "3108799691");
-        Cliente vanessa = new Cliente(1, "35526079", "Vanessa Rincon", "vaneri@hotmail.com", "Cll 8 # 19-28", "Facatativá", "3108799692");
-        
-        personas.add(mauricio);
-        personas.add(joma);
-        personas.add(juan);
-        personas.add(jenny);
-        personas.add(vanessa);
-        
-        for (Persona listaAsesores : personas) {
-            System.out.println("  -> "+listaAsesores.getCedula()+" -> "+listaAsesores.getNombre());
+    public void agregarAsesor()throws IOException{
+        do{
+            System.out.println("Digite Cedula");
+            String cedulaAsesor = entradaDatos.readLine();
+            System.out.println("Digite Nombre");
+            String nombreAsesor = entradaDatos.readLine();
+            System.out.println("Digite Correo");
+            String correoAsesor = entradaDatos.readLine();
+            System.out.println("Digite Direccion Domicilio");
+            String direccionAsesor = entradaDatos.readLine();
+            System.out.println("Digite Ciudad Domicilio");
+            String ciudadAsesor = entradaDatos.readLine();
+            System.out.println("Digite No Celular");
+            String celularAsesor = entradaDatos.readLine();
+            Asesor nuevoAsesor = new Asesor(20, id, cedulaAsesor, nombreAsesor, correoAsesor, direccionAsesor, ciudadAsesor, celularAsesor, "Asesor");
+            personas.add(nuevoAsesor);
+            System.out.println("Desea Ingresar otro Asesor?");
+            opcion=entradaDatos.readLine().toUpperCase();
+            id++;
+        }while(opcion.equals("S"));
+    }
+    
+    public void agregarCiente()throws IOException{
+        do{
+            System.out.println("Digite Cedula");
+            String cedulaCliente = entradaDatos.readLine();
+            System.out.println("Digite Nombre");
+            String nombreCliente = entradaDatos.readLine();
+            System.out.println("Digite Correo");
+            String correoCliente = entradaDatos.readLine();
+            System.out.println("Digite Direccion Domicilio");
+            String direccionCliente = entradaDatos.readLine();
+            System.out.println("Digite Ciudad Domicilio");
+            String ciudadCliente = entradaDatos.readLine();
+            System.out.println("Digite No Celular");
+            String celularCliente = entradaDatos.readLine();
+            Cliente nuevoCliente = new Cliente(id, cedulaCliente, nombreCliente, correoCliente, direccionCliente, ciudadCliente, celularCliente, "Cliente");
+            personas.add(nuevoCliente);
+            System.out.println("Desea Ingresar otro Cliente?");
+            opcion=entradaDatos.readLine().toUpperCase();
+            id++;
+        }while(opcion.equals("S"));
+    }
+    public void obtenerPersonas(){
+        for (Persona persona : personas){
+            System.out.println("  -> "+persona.getCedula()+" "+persona.getNombre());
         }
+    }
+    public ArrayList obtenerPersonas(String cedula, String rol){
+        ArrayList<Persona> cliente=new ArrayList();
+        for (Persona persona : personas){
+            cliente.add(persona);
+            System.out.println("  -> "+persona.getCedula()+" "+persona.getNombre());
+        }
+        return cliente;
     }
 }

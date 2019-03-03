@@ -14,8 +14,8 @@ public class Familiar extends Vehiculo{
     public Familiar(){
         super();
     }
-    public Familiar(Integer idVehiculo, String marca, String modelo, String color, double precio) {
-        super(idVehiculo, marca, modelo, color, precio);
+    public Familiar(Integer idVehiculo, String marca, String modelo, String color, double precio, String categoria, int cantidad, boolean disponible) {
+        super(idVehiculo, marca, modelo, color, precio, categoria, cantidad, disponible);
     }
     
     

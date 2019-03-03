@@ -15,8 +15,8 @@ public class Camioneta extends Vehiculo{
     public Camioneta(){
         super();
     }
-    public Camioneta(boolean platon, Integer idVehiculo, String marca, String modelo, String color, double precio) {
-        super(idVehiculo, marca, modelo, color, precio);
+    public Camioneta(boolean platon, Integer idVehiculo, String marca, String modelo, String color, double precio, String categoria, int cantidad, boolean disponible) {
+        super(idVehiculo, marca, modelo, color, precio, categoria, cantidad, disponible);
         this.platon = platon;
     }
 }
