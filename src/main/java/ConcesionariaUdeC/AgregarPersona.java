@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ConcesionariaUdeC;
 
 import java.io.BufferedReader;
@@ -12,7 +7,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Yonathan
+ * @author Yonathan Bohorquez
+ * @author Manuel Bohorquez
+ * 
+ * Clase donde se agregan nuevas personas dependiendo del Rol ya sea Cliente
+ * o Asesor
  */
 public class AgregarPersona {
     int id=1;
@@ -67,6 +66,8 @@ public class AgregarPersona {
             id++;
         }while(opcion.equals("S"));
     }
+    
+    //Metodos para obtener el listado de los clientes registrados.
     public void obtenerPersonas(){
         for (Persona persona : personas){
             System.out.println("  -> "+persona.getCedula()+" "+persona.getNombre());

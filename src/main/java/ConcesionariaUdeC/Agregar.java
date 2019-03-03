@@ -7,7 +7,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Yonathan
+ * @author Yonathan Bohorquez
+ * @author Manuel Bohorquez
+ * 
+ * Clase donde se agregan nuevos automoviles dependiendo la categoría, todos
+ * agregados en una misma lista.
  */
 public class Agregar {
     boolean disponible = true, accesorioAdicional;
@@ -103,7 +107,8 @@ public class Agregar {
         }while(opcion.equals("S"));
     }
     
-    public void getAutos(String categoria){
+    //Metodo para obtener el listado de autos registrados, por categoria.
+    public void obtenerAutos(String categoria){
         for (int i=0; i<vehiculos.size();i++){
             if(vehiculos.get(i).categoria.equals(categoria)){
                 System.out.println("Marca: "+vehiculos.get(i).marca+

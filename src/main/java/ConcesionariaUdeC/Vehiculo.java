@@ -1,16 +1,12 @@
-/*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
 package ConcesionariaUdeC;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
- * @author Yonathan
+ * @author Yonathan Bohorquez
+ * @author Manuel Bohorquez
+ * 
+ * Clase donde se declaran las variables propias de un Vahiculo y esta clase
+ * hereda sus variables a las distintas clases para la categoria del automovil.
  */
 public class Vehiculo {
     

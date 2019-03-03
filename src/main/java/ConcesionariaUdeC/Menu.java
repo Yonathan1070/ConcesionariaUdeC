@@ -1,8 +1,3 @@
-/*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
 package ConcesionariaUdeC;
 
 import java.io.BufferedReader;
@@ -12,7 +7,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Yonathan
+ * @author Yonathan Bohorquez
+ * @author Manuel Bohorquez
+ * 
+ * Clase del menú y submenus de navegación donde redirecciona a las respectivas
+ * clases, según sea la opcion seleccionada.
  */
 public class Menu {
     public BufferedReader entradaDatos = new BufferedReader (new InputStreamReader (System.in));
@@ -30,10 +29,7 @@ public class Menu {
             System.out.println("|   5. Comprar Automovil.                   |");
             System.out.println("|   0. Salir.                               |");
             System.out.println("+ - - - - - - - - - - - - - - - - - - - - - +");
-            
-            /**
-             * Recibimos la opcion seleccionada.
-             */
+
             opcionMenu=entradaDatos.readLine();
             
             switch(opcionMenu){
@@ -139,13 +135,13 @@ public class Menu {
             
             switch(opcionMenu){
                 case "1":
-                    buscar.getAutos("Familiar");
+                    buscar.obtenerAutos("Familiar");
                     break;
                 case "2":
-                    buscar.getAutos("Deportivo");
+                    buscar.obtenerAutos("Deportivo");
                     break;
                 case "3":
-                    buscar.getAutos("Camioneta");
+                    buscar.obtenerAutos("Camioneta");
                     break;
                 case "0":
                     break;

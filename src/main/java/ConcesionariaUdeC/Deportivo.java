@@ -1,13 +1,12 @@
-/*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
 package ConcesionariaUdeC;
 
 /**
  *
- * @author Yonathan
+ * @author Yonathan Bohorquez
+ * @author Manuel Bohorquez
+ * 
+ * Clase donde se llaman las variables heredadas de la clase Vehiculo y se
+ * declaran las variables propias de la Clase Deportivo.
  */
 public class Deportivo extends Vehiculo{
 
